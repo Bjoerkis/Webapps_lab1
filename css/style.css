@@ -1,0 +1,221 @@
+
+* {
+    box-sizing: border-box
+}
+
+body {
+
+    flex-direction: column;
+    background: url(/img/moviebackground2.jpg) no-repeat center center fixed;;
+    background-size: cover;
+    height: 100%;
+
+    margin: 5px;
+
+    padding: 0;
+
+}
+
+.movie {
+    padding: 15px;
+    margin: 20px;
+    background-color: gray;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px black;
+
+}
+
+.movie img {
+    max-width: 100%;
+    height: auto;
+    padding: 3px;
+}
+
+.movie-info {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1px;
+    letter-spacing: 1px;
+
+}
+
+.movie-info h3, span {
+    margin: 0;
+    color: black;
+}
+
+
+.header {
+    grid-area: hd;
+    font-size: 50px;
+}
+
+.footer {
+    grid-area: ft;
+}
+
+.menu {
+
+    grid-area: menu;
+    font-size: 40px;
+
+}
+
+ol {
+
+    color: gray;
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+
+}
+
+ol li {
+    padding-right: 20px;
+}
+
+
+li {
+
+    margin-bottom: 25px;
+    display: inline-block;
+
+}
+
+a:link {
+    color: gray;
+}
+
+a:visited {
+    color: gray;
+}
+
+a:hover {
+    color: darkred;
+}
+
+a:active {
+    color: blue;
+}
+
+.content {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 5px;
+}
+
+
+.container {
+    background-color: transparent;
+    display: grid;
+    color: darkgray;
+    grid-gap: 15px;
+    padding: 3px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      "hd hd hd hd   hd   hd   hd   hd   hd"
+      "menu menu menu menu menu menu menu menu menu"
+      "main main main main main main main main main"
+      "main main main main main main main main main"
+      "ft  ft  ft  ft   ft   ft   ft   ft   ft";
+
+}
+
+.container > div {
+    text-align: center;
+
+    padding: 20px 0;
+    word-wrap: break-word;
+
+}
+.container2 {
+    background-color: transparent;
+    display: grid;
+    color: darkgray;
+    grid-gap: 15px;
+    padding: 3px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      "hd hd hd hd   hd   hd   hd   hd   hd"
+      "menu menu menu menu menu menu menu menu menu"
+      "main main main main main main main main main"
+      "main main main main main main main main main"
+      "ft  ft  ft  ft   ft   ft   ft   ft   ft";
+
+}
+
+.container2 > div {
+    text-align: center;
+    display: inline-block;
+    padding: 20px 0;
+    word-wrap: break-word;
+
+}
+
+.center {
+    color:gray;
+    margin: 100px auto auto;
+    border: 1px solid gray;
+    padding: 5px;
+}
+.centerTwo{
+    color:gray;
+    text-align: center;
+    font-size: 30px;
+    margin: 100px auto auto;
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+
+@media screen and (min-width: 1025px) {
+
+    .content {
+        grid-template-columns: repeat(4, 1fr);
+        border: 5px solid darkred;
+        border-radius: 10px;
+    }
+
+    .movie {
+        background-color: darkred;
+    }
+
+
+    .menu {
+        border: 5px solid darkred;
+        border-radius: 10px;
+
+    }
+
+    nav .menu {
+        grid-area: navigation;
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav .menu a {
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .header {
+        border: 5px solid darkred;
+        border-radius: 10px;
+    }
+
+    .footer {
+        border: 5px solid darkred;
+        border-radius: 10px;
+    }
+
+
+}
+
+
